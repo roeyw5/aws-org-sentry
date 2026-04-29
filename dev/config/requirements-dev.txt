@@ -1,0 +1,6 @@
+pytest==7.4.3
+pytest-cov==4.1.0
+moto==4.2.9
+black==23.12.1
+flake8==7.0.0
+flake8-docstrings==1.7.0

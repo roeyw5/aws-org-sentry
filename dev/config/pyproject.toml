@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 100
+target-version = ['py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.venv
+  | venv
+  | \.pytest_cache
+  | \.terraform
+  | build
+  | dist
+)/
+'''
