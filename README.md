@@ -1,8 +1,10 @@
-# org-scanner
+# Multi-Account AWS Idle-Resource Scanner with Slack Alerts
 
 Multi-account AWS idle resource scanner with Slack alerts and one-click stop actions, deployed via Terraform.
 
 Runs as a Lambda on a scheduled EventBridge cron. Assumes a cross-account role into each target account, scans for idle or unexpectedly long-running resources across 11 resource types, filters against configurable time/count thresholds, then sends Slack DMs to account owners and a summary to a monitoring channel. A Slack button on the monitoring message triggers a separate API Gateway endpoint to stop resources on demand.
+
+![aws-org-sentry architecture](docs/Architecture-Diagram.png)
 
 ---
 
@@ -27,8 +29,6 @@ All thresholds are configurable per account via Terraform variables.
 ---
 
 ## Architecture
-
-![org-scanner architecture](docs/Architecture-Diagram.png)
 
 Two trigger paths feed the Scanner Lambda:
 
